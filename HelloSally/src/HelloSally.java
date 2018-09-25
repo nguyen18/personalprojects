@@ -19,7 +19,6 @@ public class HelloSally {
         	
         	do {
         	System.out.println("if you are bored, type \'bored\'");
-        	System.out.println("if you are sad, type \'sad\'");
         	String userFeeling = userInput.nextLine();
         	
         		if(!userFeeling.equals("bored") && !userFeeling.equals("sad")) {
@@ -52,10 +51,19 @@ public class HelloSally {
                 		 "Learn a new language (pro tip: watch videos/shows in those languages)",
                 		 "Write a short story. Remember show it, don't tell it",
                 		 "Make a bucket list and be motivated to do them",
+                		 "befriend some deer ^-^ #deersquad",
+                		 "learn how to program lol.",
+                		 "solve global warming",
+                		 "watch the latest tween show (ex: Riverdale)",
+                		 "Stream the newest BTS song. do it, you know you want to",
+                		 "get a boyfriend or girlfriend. if you have one, get a friend :-)",
+                		 
+                		 
 
                 		 };
                  
-                 String chosenAct = activities[rand];
+                 String chosenAct = activities[activities.length-1];
+                 System.out.println();
                  System.out.println(chosenAct);
 
         	}
