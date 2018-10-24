@@ -1,0 +1,145 @@
+.menubar {
+    position: absolute;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.6;
+}
+
+a:hover {
+    opacity: 1.0;
+}
+
+#name {
+    font-family: sans-serif;
+    float: right;
+    font-weight: lighter;
+    font-size: 12px;
+    overflow: hidden;
+    border-right: .15em solid lightblue;
+    white-space: nowrap;
+    margin-right: 50px;
+    letter-spacing: .40em;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+    
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 140px }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: lightblue }
+}
+
+#menu {
+    
+    right: 10px;
+    top: -5px;
+    
+}
+
+#lotusimage {
+    opacity: 0.6;
+}
+
+#lotusimage:hover {
+    opacity: 1.0;
+}
+
+#menucontent {
+    display: none;
+    position: absolute;
+    right: 5px;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+   
+#menu:hover #menucontent {
+    display: block;
+}
+
+#menuoptions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: white;
+    top: 1px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    
+}
+
+li a {
+    display: block;
+    color: #000;
+    opacity: 0.6;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: skyblue;
+    opacity: 1.0;
+}
+
+#contacttitle {
+    padding: 10%;
+    margin-left: 10%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    letter-spacing: .15em;
+    padding-bottom: 10px;
+}
+
+.bracket {
+    color: skyblue;
+}
+
+#contactcontents {
+    margin-left: 20%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    letter-spacing: .15em;
+    font-size: 12px;
+    overflow: hidden;
+    border-right: .15em solid olive;
+    white-space: nowrap;
+    width: 217px;
+    animation: 
+    type 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+#contactcontents2 {
+    margin-left: 20%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    letter-spacing: .15em;
+    font-size: 12px;
+    overflow: hidden;
+    border-right: .15em solid olive;
+    white-space: nowrap;
+    width: 132px;
+    animation: 
+    type 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes type {
+  from { width: 0 }
+  to { width: 200px }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: olive}
+}
