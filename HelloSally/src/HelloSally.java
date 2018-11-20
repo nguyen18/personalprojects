@@ -5,7 +5,7 @@ public class HelloSally {
 		Scanner userInput = new Scanner(System.in);
 		
 		System.out.println("type 'hello sally' to begin.");
-		String startCommand = userInput.nextLine();
+		String startCommand = userInput.nextLine().toLowerCase();
 		
 			while(!startCommand.equals("hello sally")) {
 				System.out.println("...try again dudski.");
@@ -19,7 +19,7 @@ public class HelloSally {
         	
         	do {
         	System.out.println("if you are bored, type \'bored\'");
-        	String userFeeling = userInput.nextLine();
+        	String userFeeling = userInput.nextLine().toLowerCase();
         	
         		if(!userFeeling.equals("bored") && !userFeeling.equals("sad")) {
         			System.out.println("Welp. If you are fine, then carry on about your day. \ngoodbye!");
@@ -29,9 +29,6 @@ public class HelloSally {
         		 System.out.println();
                  System.out.println("Well-- I can help with that");
                  System.out.println("Today you should try doing:");
-
-                 Random random = new Random();
-                 int rand = random.nextInt(12);
 
                  String[] activities = {
                 		 "Plant an herb garden. Help the environment, be healthy and have a cute garden! \n (tip: basil smells and tastes great)",
@@ -57,14 +54,20 @@ public class HelloSally {
                 		 "watch the latest tween show (ex: Riverdale)",
                 		 "Stream the newest BTS song. do it, you know you want to",
                 		 "get a boyfriend or girlfriend. if you have one, get a friend :-)",
+                		 "get an education! learn some random skills from the internet",
+                		 
                 		 
                 		 
 
                 		 };
                  
-                 String chosenAct = activities[activities.length-1];
+                 Random random = new Random();
+                 int rand = random.nextInt(activities.length-1);
+                 
+                 String chosenAct = activities[rand];
                  System.out.println();
                  System.out.println(chosenAct);
+                 
 
         	}
         	
