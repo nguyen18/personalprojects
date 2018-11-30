@@ -42,8 +42,8 @@ public class HelloSally {
               		 "watch the latest tween show (ex: Riverdale)",
               		 "Stream the newest BTS song. do it, you know you want to",
               		 "get a boyfriend or girlfriend. if you have one, get a friend :-)",
-              		 "get an education! learn some random skills from the internet"
-              		 
+              		 "get an education! learn some random skills from the internet",
+              		 "Write a Java Program lol"
 
               		 ));
         	
