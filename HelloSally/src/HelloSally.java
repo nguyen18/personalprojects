@@ -51,7 +51,7 @@ public class HelloSally {
         	System.out.println("if you are bored, type \'bored\'");
         	String userFeeling = userInput.nextLine().toLowerCase();
         	
-        		if(!userFeeling.equals("bored") && !userFeeling.equals("sad")) {
+        		if(!userFeeling.equals("bored")) {
         			System.out.println("I think you spelled bored wrong");
         		}
  
