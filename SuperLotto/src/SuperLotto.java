@@ -53,12 +53,12 @@ public class SuperLotto {
 		boolean duplicate = false;
 		
 		// nested for loops tests whether each number matches any of the other first 5 numbers
-		for(int num = 0; num < lottoNums.length-1; num++) {
+		for(int testNum = 0; testNum < lottoNums.length-1; testNum++) {
 
 			// I did lottoNums.length-1 so that it only checks the first 5 elements
-			for(int testNum = num + 1; testNum < lottoNums.length-1; testNum++) {
+			for(int num = testNum + 1; num < lottoNums.length-1; num++) {
 				
-				if(lottoNums[num] == lottoNums[testNum]) {
+				if(lottoNums[testNum] == lottoNums[num]) {
 					// if two elements have equal value, assign duplicate with true
 					duplicate = true;
 				}
