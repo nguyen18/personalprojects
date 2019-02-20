@@ -1,66 +1,92 @@
+import java.util.*;
 
 public class Noodles {
 
-	private String soup;
-	private String utensil;
-	private int numNoodles;
+	private String soupType;
+	private double price;
 	private boolean spicy;
 	
 	public Noodles() { //default constructor
-		soup = "beef broth";
-		utensil = "chopsticks";
-		numNoodles = 100;
-		spicy = false;
+		this("beef broth", 100, false);
 	}
 	
-	public Noodles(String soup, String utensil, int numNoodles, boolean spicy) {
-		this.soup = soup;
-		this.utensil = utensil;
-		this.numNoodles = numNoodles;
+	public Noodles(String soupType, double price, boolean spicy) {
+		this.soupType = soupType;
+		this.price = price;
 		this.spicy = spicy;
 	}
 	
-	public String getSoup() {
-		return soup;
+	public String getSoupType() {
+		return soupType;
 	}
 	
-	public String getUtensil() {
-		return utensil;
-	}
-	
-	public int getNumNoodles() {
-		return numNoodles;
+	public double getPrice() {
+		return price;
 	}
 	
 	public boolean getSpicy() {
 		return spicy;
 	}
 	
-	public void setSoup(String soup) {
-		this.soup = soup;
+	public void setSoupType(String soupType) {
+		this.soupType = soupType;
 	}
 	
-	public void setUtensil(String utensil) {
-		this.utensil = utensil;
-	}
-	
-	public void setNumNoodles(int numNoodles) {
-		this.numNoodles = numNoodles;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 	public void setSpicy(boolean spicy) {
 		this.spicy = spicy;
 	}
 	
-	public void display() {
+	public void displayData() {
+		System.out.println("soup: " + soupType);
+		System.out.println("price:" + price);
+		System.out.println("spicy: " + spicy);
+	}
+	
+	public void makeOrder(String menuItem) {
+		if(menuItem.toLowerCase().equals("pho")) {
+			soupType = "beef broth";
+			price = 8.50;
+		} 
+		else if(menuItem.toLowerCase().equals("garlic noodles")) {
+			soupType = "no";
+			price = 9.50;
+		} 
+		else if(menuItem.toLowerCase().equals("ramen")) {
+			soupType = "rich miso";
+			price = 10.50;
+		} 
+		else {
+			Scanner userInput = new Scanner(System.in);
+			
+			System.out.println("What kind of soup would you like? (type no for no soup)");
+			soupType = userInput.nextLine();
+			
+			System.out.println("Do you like spicy?");
+			String spicyAnswer = userInput.nextLine();
+			
+				if(spicyAnswer.toLowerCase().equals("yes")) {
+					spicy = true;
+				} else {
+					spicy = false;
+				}
+		}
+		
+	}
+	
+	public void serveOrder() {
 		System.out.println("Your order is: ");
 		System.out.println();
 		
 		if(spicy == true) {
-			soup = "spicy " + soup;
+			soupType = "spicy " + soupType;
 		}
 		
-		System.out.println(numNoodles + " noodles with " + soup + "!");
-		System.out.println("Enjoy with " + utensil);
+		System.out.println(soupType + " soup. This will cost " + price);
+		
 	}
+	
 }
