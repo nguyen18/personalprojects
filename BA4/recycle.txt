@@ -1,4 +1,0 @@
-Item, Material, Weight, Recycle amount
-Coke,Aluminum,0.5,0.8
-Sprite,Glass,0.8,0.08000000000000002
-TOTAL,,,0.8800000000000001
