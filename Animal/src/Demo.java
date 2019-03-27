@@ -4,7 +4,6 @@
  * Professor Gappy
  * BA3
  */
-import java.util.*;
 
 /**
  * The Demo class contains main method which runs the client.
@@ -26,14 +25,10 @@ public class Demo {
 		HummingBird bluebird = new HummingBird();
 		Mammal dog = new Mammal();
 		
-		//ArrayList of Animal objects
-		ArrayList<Animal> myAnimals = new ArrayList<Animal>();
-		myAnimals.add(human);
-		myAnimals.add(ostrich); //can put subclass objects in superclass object ArrayList since it extends the base class
-		myAnimals.add(bluebird);
-		myAnimals.add(dog);
+		//Array of Animal objects
+		Animal[] myAnimals = {human, ostrich, bluebird, dog};
 		
-		//for each loop calls the speak() method for each object
+		//for each loop calls the speak() method for each element of myAnimals
 		for(Animal pet : myAnimals) {
 			pet.speak();
 		}
