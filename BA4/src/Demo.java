@@ -1,15 +1,38 @@
+/*
+ * Taylor Nguyen 
+ * CS108 2PM Lecture Mondays  & Wednesdays
+ * Professor Gappy
+ * BA4
+ */
 import java.io.*;
 import java.util.*;
 
+/**
+ * The Demo class contains main method which runs the client.
+ * 
+ * @author Taylor
+ *
+ */
 public class Demo {
 	
+	/**
+	 * Main method, runs the client. Void return.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Can cokeCan = new Can("Coke", "Aluminum", 0.5);
+		Can gingerAle = new Can("Ginger Ale", "plastic", 0.4);
+		Bottle waterBottle = new Bottle("water", "plastic", 0.6);
 		Bottle spriteBottle = new Bottle("Sprite", "Glass", 0.8);
 		
 		ArrayList<Recycleable> recyclingList = new ArrayList<Recycleable>();
 
+		recyclingList.add(gingerAle);
+		recyclingList.add(waterBottle);
+		recyclingList.add(cokeCan);
+		recyclingList.add(spriteBottle);
 		
 		String answer = "yes";
 		Scanner input = new Scanner(System.in);
@@ -43,6 +66,12 @@ public class Demo {
 		
 	}
 	
+	/**
+	 * Creates a spreadsheet and puts recycled materials in list with amount earned 
+	 * from recycling. Void return.
+	 * 
+	 * @param recyclingList
+	 */
 	public static void createSpreadsheet(ArrayList<Recycleable> recyclingList) {
 	
 		PrintWriter spreadsheet;
@@ -52,14 +81,17 @@ public class Demo {
 		double totalSum = 0.0;
 		
 		spreadsheet.println("Item, Material, Weight, Recycle amount");
+		
 		for(Recycleable item : recyclingList) {
 			spreadsheet.println(item.getName() + "," + item.getMaterial() + "," +  item.getWeight() + "," +  item.recycle());
 			totalSum += item.recycle();
 		}
+		
 		spreadsheet.println("TOTAL,,," + totalSum);
 		spreadsheet.close();
-	} catch (FileNotFoundException e) {
-		System.out.println("where da file");
-	}
+		
+		} catch (FileNotFoundException e) {
+			System.out.println("where da file");
+		}
 	}
 }
