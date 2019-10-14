@@ -10,7 +10,7 @@ public class FibonacciNum {
 		int n = Integer.parseInt(user);
 		
 		ArrayList<Integer> fib = new ArrayList<Integer>();
-		fib.add(1);
+		fib.add(0);
 		fib.add(1);
 		int prev = 0;
 		int sum;
