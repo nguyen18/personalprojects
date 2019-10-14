@@ -46,19 +46,23 @@ public class HelloSally {
               		 "Write a Java Program lol"
 
               		 ));
-        	
-        	do {
-        	System.out.println("if you are bored, type \'bored\'");
+            
+         	System.out.println("if you are bored, type \'bored\'");
         	String userFeeling = userInput.nextLine().toLowerCase();
         	
-        		if(!userFeeling.equals("bored")) {
-        			System.out.println("I think you spelled bored wrong");
+        		while(!userFeeling.equals("bored")) {
+        			System.out.println("I think you spelled bored wrong. try again.");
+        			userFeeling = userInput.nextLine().toLowerCase();
         		}
  
                 
         	if(userFeeling.equals("bored")) {
         		 System.out.println();
                  System.out.println("Well-- I can help with that");
+        	}
+        	
+        	do {
+       
                  System.out.println("Today you should try doing:");
 
                  Random random = new Random();
@@ -71,7 +75,7 @@ public class HelloSally {
                  activities.remove(rand);
                  
 
-        	}
+   
         	
         	System.out.println();
         	System.out.println("Would you like to restart? yes or no");
